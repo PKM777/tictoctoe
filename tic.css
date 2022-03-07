@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+body{
+    margin: 0;
+    background-color: #0A5E2AFF;
+}
+.main{
+    width:100vw;
+    height:100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+.container{
+    width: 300px;
+    height: 300px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+.cubes{
+    width: 100px;
+    height: 100px;
+    background-color: #FE0000FF;
+    border: 1px solid #EFEFE8FF;
+    text-align: center;
+    justify-content: [center];
+    color: #EFEFE8FF;
+    font-size: 4em;
+    padding-top: 12px;
+    
+}
+h1{
+    position: absolute;
+    top: 8vh;
+    color: #EFEFE8FF;
+}
+#play1{
+    top: 20vh;
+    left: 39vw;
+    width: 150px;
+    font-size: 16px;
+    position: absolute;
+    height: 40px;
+    background-color: #6DAC4FFF;
+    color: #EFEFE8FF;
+}
+#play2{
+    top: 20vh;
+    left: 50vw;
+    position: absolute;
+    width: 150px;
+    font-size: 16px;
+    height: 40px;
+    background-color: rgb(93, 143, 70);
+    color: #EFEFE8FF;
+}
+#restart{
+    position: absolute;
+    top: 75vh;
+    width: 150px;
+    height: 40px;
+    background-color: #0A5E2AFF;
+    color: #EFEFE8FF;
+    font-weight: 500;
+    
+}
+#result{
+    background-color: blueviolet;
+    width: 300px;
+    height: 30px;
+}
+
+@media only screen 
+and (min-device-width: 300px) 
+and (max-device-width: 812px) 
+{
+
+    #play2{
+        
+        left: 52vw;
+    }
+    #play1{
+        left: 13vw;
+    }
+
+}
+@media only screen
+ and (min-width: 768px) 
+ and (max-width: 1024px){
+    #play1{
+        left: 32vw;
+    }
+ }
