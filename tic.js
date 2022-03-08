@@ -1,21 +1,21 @@
 let cubed = document.getElementsByClassName('cubes');
+
 let divs = Array.from(cubed);
+console.log(divs);
 var switcher=true;
 let restart = document.getElementById('restart');
 restart.onclick=()=>{location.reload()};
 
-
 divs.map(block=>{block.onclick = (e)=>{e.target.innerText='X';
+console.log(e.target);
 if(e.target.innerText!=='X'){Player1.disabled=false;};
-                                       
 let Player1 = document.getElementById('play1');
 let Player2 = document.getElementById('play2');
-                                       
 if(switcher==true){
     Player1.disabled=true;
     Player2.disabled=false;
     Player2.innerText='Player 2 Turn';
-    Player2.style.backgroundColor='#00ff00';
+    Player2.style.backgroundColor='crimson';
     Player2.style.fontWeight='700';
     Player1.style.fontWeight='100';
     Player1.style.backgroundColor="#A89C94FF";
@@ -29,15 +29,17 @@ else if(switcher==false){
     Player1.style.fontWeight='700';
     Player2.style.fontWeight='100';
     Player1.innerText='Player 1 Turn';
-    Player1.style.backgroundColor='#00ff00';
+    Player1.style.backgroundColor='crimson';
     Player2.style.backgroundColor="#A89C94FF";
     makeIt();
 };
 let parentElement = document.getElementById('cont');
-let possibilities = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[2,4,6],[0,4,8]];
 
+
+
+let possibilities = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[2,4,6],[0,4,8]];
+console.log(parentElement.children[8].innerText);
 for(let n=0; n<8; n++){
-    
     parentElement.children[n].innerText;
      
     function checkResult([i,j,k]){
@@ -45,37 +47,29 @@ for(let n=0; n<8; n++){
         if(parentElement.children[i].innerText=='X'&&parentElement.children[j].innerText=='X'&&parentElement.children[k].innerText=='X')
         {
          Player1.innerText='Player 1 WON!!';
-         Player1.style.width= '300px';
+         Player1.style.width= '20vw';
+         Player1.style.top='50vh';
+         Player2.style.display='none';
+         if(window.innerWidth<812 || window.innerWidth<1024){Player1.style.width= '100vw';Player1.style.top='45vh';}
          Player1.style.zIndex='3';
          Player1.style.fontWeight='700';
-         Player1.style.backgroundColor='green';
+         Player1.style.backgroundColor='#FE0000FF';
          Player1.style.color='white';
-
-         Player2.style.top='45vh';
-         Player2.style.left='39vw';
-         if(window.innerWidth<812){Player2.style.left='13.5vw';}else if(window.innerWidth<1024){Player2.style.left='32vw';};
-         Player2.innerText='Player 1 Won';
-         Player2.style.width= '300px';
-         Player2.style.zIndex='4';
-         Player2.onclick=()=>{location.reload()};
+         parentElement.style.display='none';
+         
         };
-        
         if(parentElement.children[i].innerText=='O'&&parentElement.children[j].innerText=='O'&&parentElement.children[k].innerText=='O')
         {
          Player1.innerText='Player 2 WON!!';
-         Player1.style.width= '300px';
+         Player1.style.width= '22vw';
+         Player1.style.top='50vh';
+         if(window.innerWidth<812 || window.innerWidth<1024){Player1.style.width= '100vw';Player1.style.top='45vh';}
          Player1.style.zIndex='5';
          Player1.style.fontWeight='700';
-         Player1.style.backgroundColor='green';
+         Player1.style.backgroundColor='#FE0000FF';
          Player1.style.color='white';
-
-         Player2.style.top='45vh';
-         Player2.style.left='39vw';
-         if(window.innerWidth<812){Player2.style.left='13.5vw';}else if(window.innerWidth<1024){Player2.style.left='32vw';};
-         Player2.innerText='Player 2 WON!!';
-         Player2.style.width= '300px';
-         Player2.style.zIndex='6';
-         Player2.onclick=()=>{location.reload()};
+         parentElement.style.display='none';
+         Player2.style.display='none';
         };
     
     };
@@ -86,7 +80,8 @@ function makeIt(){switcher=true};
 function bounceIT(){switcher=false};
 }});
 
-
+console.log(window.innerWidth);
+//0 1 2, 3 4 5 , 6 7 8, 0 3 6, 1 4 7, 2 5 8, 2 4 6, 0 4 8
 
 
 

@@ -19,8 +19,8 @@ body{
 
 }
 .container{
-    width: 300px;
-    height: 300px;
+    width: 22vw;
+    height: 45vh;
     
     display: flex;
     flex-wrap: wrap;
@@ -28,15 +28,15 @@ body{
     
 }
 .cubes{
-    width: 100px;
-    height: 100px;
+    width: 33.33%;
+    height: 33.33%;
     background-color: #FE0000FF;
     border: 1px solid #EFEFE8FF;
     text-align: center;
     justify-content: center;
     color: #EFEFE8FF;
-    font-size: 4em;
-    padding-top: 12px;
+    font-size: 4rem;
+    padding-top: 1%;
     
 }
 h1{
@@ -47,10 +47,10 @@ h1{
 #play1{
     top: 20vh;
     left: 39vw;
-    width: 150px;
-    font-size: 16px;
+    width: 11%;
+    font-size: 1rem;
     position: absolute;
-    height: 40px;
+    height: 7%;
     background-color: #6DAC4FFF;
     color: #EFEFE8FF;
 }
@@ -58,17 +58,17 @@ h1{
     top: 20vh;
     left: 50vw;
     position: absolute;
-    width: 150px;
-    font-size: 16px;
-    height: 40px;
+    width: 11%;
+    font-size: 1rem;
+    height: 7%;
     background-color: rgb(93, 143, 70);
     color: #EFEFE8FF;
 }
 #restart{
     position: absolute;
     top: 75vh;
-    width: 150px;
-    height: 40px;
+    width: 10%;
+    height: 7%;
     background-color: #0A5E2AFF;
     color: #EFEFE8FF;
     font-weight: 500;
@@ -80,24 +80,42 @@ h1{
     height: 30px;
 }
 
-@media only screen 
-and (min-device-width: 300px) 
+ @media only screen 
+and (min-device-width: 250px) 
 and (max-device-width: 812px) 
 {
-
-    #play2{
-        
-        left: 52vw;
+    .container{
+        width: 100vw;
+        height: 45vh;
     }
     #play1{
-        left: 13vw;
+        width: 50vw;
+        left: 0vw;
+    }
+    #play2{
+        width: 50vw;
+    }
+    #restart{
+        width: 50vw;
     }
 
 }
 @media only screen
  and (min-width: 768px) 
  and (max-width: 1024px){
-    #play1{
-        left: 32vw;
+    .container{
+        width: 80vw;
+        height: 45h;
     }
- }
+    #play1{
+        width: 50vw;
+        left: 0vw;
+    }
+    #play2{
+        width: 50vw;
+    }
+    #restart{
+        width: 50vw;
+    }
+    
+ } 
