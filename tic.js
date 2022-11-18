@@ -7,7 +7,7 @@ let restart = document.getElementById('restart');
 restart.onclick=()=>{location.reload()};
 
 divs.map(block=>{block.onclick = (e)=>{e.target.innerText='X';
-console.log(e.target);
+
 if(e.target.innerText!=='X'){Player1.disabled=false;};
 let Player1 = document.getElementById('play1');
 let Player2 = document.getElementById('play2');
@@ -38,12 +38,11 @@ let parentElement = document.getElementById('cont');
 
 
 let possibilities = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[2,4,6],[0,4,8]];
-console.log(parentElement.children[8].innerText);
 for(let n=0; n<8; n++){
     parentElement.children[n].innerText;
      
     function checkResult([i,j,k]){
-        console.log(i,j,k);
+        
         if(parentElement.children[i].innerText=='X'&&parentElement.children[j].innerText=='X'&&parentElement.children[k].innerText=='X')
         {
          Player1.innerText='Player 1 WON!!';
@@ -80,7 +79,7 @@ function makeIt(){switcher=true};
 function bounceIT(){switcher=false};
 }});
 
-console.log(window.innerWidth);
+
 
 
 
